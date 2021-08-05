@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
-import createListComponents from './functions/createListComponents'
+import createListComponents from '../functions/createListComponents'
 
 class ThemesArea extends React.Component {
   render() {
     let themesAreaStyle= {
       width: '15%',
-      height: '84vh',
-      margin: '5px 5px 5px 0px',
-      padding: 5
+      height: '45vh',
+      padding: 5,
+      background: 'blue'
     };
     let textStyle = {
       textAlign: 'left',
       marginBottom: 15,
+      marginTop: 10,
       fontFamily: 'Courier',
       fontSize: 20,
       opacity: 0.5,

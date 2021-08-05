@@ -1,4 +1,4 @@
-import Theme from '../Theme';
+import Theme from '../components/Theme';
 
 const createListComponents = (objList) => {
   return objList.map(

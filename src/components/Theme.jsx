@@ -12,7 +12,8 @@ class Theme extends React.Component {
     let themeStyle = {
       display: 'flex',
       alignItems: 'center',
-      marginBottom: 10
+      marginBottom: 10,
+      background: 'red'
     };
 
     let nameTemeStyle = {
