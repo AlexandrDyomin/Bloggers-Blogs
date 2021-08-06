@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App'
-import themesList from './data'
+import themesList, {data} from './data'
 
 const destination = document.querySelector("#root");
 
@@ -12,6 +12,7 @@ ReactDOM.render(
     altTextSearchLine='Введите запрос'
     nameSearchButton='Искать'
     nameLoginButton='Войти'
-    themesList={themesList}/>,
+    themesList={themesList}
+    data={data}/>,
   destination
 );

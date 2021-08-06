@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import createListComponents from '../functions/createListComponents'
 
-class ThemesArea extends React.Component {
+class NavBar extends React.Component {
   render() {
-    let themesAreaStyle= {
+    let sideBarStyle= {
       width: '15%',
-      height: '45vh',
-      padding: 5,
-      background: 'blue'
+      padding: 10,
+      margin: 10
     };
     let textStyle = {
       textAlign: 'left',
@@ -21,12 +20,14 @@ class ThemesArea extends React.Component {
     };
 
     return(
-      <div style={themesAreaStyle}>
+      <div style={sideBarStyle}>
         <div style={textStyle}>Темы</div>
         {createListComponents(this.props.themesList)}
+        <div style={textStyle}>Другие возможности</div>
+        {createListComponents(this.props.data)}
       </div>
     );
   }
 }
 
-export default ThemesArea;
+export default NavBar;

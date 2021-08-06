@@ -1,17 +1,16 @@
-import Theme from '../components/Theme';
+import ElemSideBar from '../components/ElemSideBar';
 
 const createListComponents = (objList) => {
-  return objList.map(
-    (obj, i) => {
-      let component = <Theme
-                        key={i + obj.theme}
-                        nameTheme={obj.theme}
-                        img={obj.image}
-                      />;
+  return objList.map( (obj, i) => {
+                        let component = <ElemSideBar
+                                          key={i + obj.text}
+                                          text={obj.text}
+                                          image={obj.image}
+                                        />;
 
-      return component;
-    }
-  );
+                        return component;
+                      }
+                    );
 }
 
 export default createListComponents;

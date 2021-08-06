@@ -1,26 +1,40 @@
 let themesList = [
   {
-    theme: 'Архитектура',
+    text: 'Архитектура',
     image: require("./img/Архитектура.jpg").default
   },{
-    theme: 'Автомобили',
+    text: 'Автомобили',
     image: require("./img/Автомобили.jpg").default
   },{
-    theme: 'Технологии',
+    text: 'Технологии',
     image: require("./img/Технологии.jpg").default
   },{
-    theme: 'Мода',
+    text: 'Мода',
     image: require("./img/Мода.jpg").default
   },{
-    theme: 'Здоровье',
+    text: 'Здоровье',
     image: require("./img/Здоровье.jpg").default
   },{
-    theme: 'Финансы',
+    text: 'Финансы',
     image: require("./img/Финансы.jpg").default
   },{
-    theme: 'Политика',
+    text: 'Политика',
     image: require("./img/Политика.jpg").default
   }
 ];
 
+let data = [
+  {
+    text: 'Понравившиеся',
+    image: require('./img/Лайк.jpg').default
+  },{
+    text: 'Прочитать позже',
+    image: require('./img/Часы.jpg').default
+  },{
+    text: 'Подписки',
+    image: require('./img/Подписки.jpg').default
+  }
+]
+
 export default themesList;
+export {data};

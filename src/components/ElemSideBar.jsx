@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Theme extends React.Component {
+class ElemSideBar extends React.Component {
   render() {
     let imgStyle = {
       height: '30px',
@@ -9,14 +9,13 @@ class Theme extends React.Component {
       cursor: 'pointer'
     };
 
-    let themeStyle = {
+    let elementStyle = {
       display: 'flex',
       alignItems: 'center',
-      marginBottom: 10,
-      background: 'red'
+      marginBottom: 10
     };
 
-    let nameTemeStyle = {
+    let textStyle = {
       marginLeft: '15px',
       fontSize: 20,
       fontFamily: 'Courier',
@@ -25,12 +24,12 @@ class Theme extends React.Component {
     };
 
     return(
-      <div style={themeStyle}>
-        <img src={this.props.img} style={imgStyle}/>
-        <span style={nameTemeStyle}>{this.props.nameTheme}</span>
+      <div style={elementStyle}>
+        <img src={this.props.image} style={imgStyle}/>
+        <span style={textStyle}>{this.props.text}</span>
       </div>
     );
   }
 }
 
-export default Theme;
+export default ElemSideBar;
