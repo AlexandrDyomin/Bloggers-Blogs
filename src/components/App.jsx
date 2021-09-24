@@ -1,21 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
-import NavBar from './NavBar';
-import ViewArea from './ViewArea';
+import Main from './Main';
 
 class App extends React.Component {
-  render() {
-    let underHeaderStyle = {
-      display: 'flex',
-      width: '100vw'
-    };
+  render() {   
     return(
       <div>
-        <Header {...this.props} />
-        <div style={underHeaderStyle}>
-          <NavBar {...this.props} />
-          <ViewArea />
-        </div>
+        <Header { ...this.props } />
+        <Main { ...this.props } />
       </div>
     );
   }

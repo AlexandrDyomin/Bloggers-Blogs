@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class ElemSideBar extends React.Component {
   render() {
@@ -24,9 +24,9 @@ class ElemSideBar extends React.Component {
     };
 
     return(
-      <div style={elementStyle}>
-        <img src={this.props.image} style={imgStyle}/>
-        <span style={textStyle}>{this.props.text}</span>
+      <div style={ elementStyle }>
+        <img src={ this.props.image } style={ imgStyle }/>
+        <span style={ textStyle }>{ this.props.text }</span>
       </div>
     );
   }

@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class LoginButton extends React.Component {
   render() {
@@ -11,12 +12,11 @@ class LoginButton extends React.Component {
       margin: 5
     }
 
-    return(
-      <input
-        type='submit'
-        style={loginButtonStyle}
-        value={this.props.nameLoginButton}
-      />
+  return(
+    <NavLink to='/login'>
+      <input type='submit'style={ loginButtonStyle } 
+        value={ this.props.nameLoginButton } />
+    </NavLink>
     );
   }
 }

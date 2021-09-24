@@ -1,4 +1,4 @@
-import React, {Component}from 'react';
+import React, { Component }from 'react';
 import SearchButton from './SearchButton';
 import SearchLine from './SearchLine';
 
@@ -14,9 +14,9 @@ class SearchArea extends React.Component {
     };
 
     return (
-      <div style={searchAreaStyle}>
-        <SearchLine {...this.props} />
-        <SearchButton  {...this.props} />
+      <div style={ searchAreaStyle }>
+        <SearchLine { ...this.props } />
+        <SearchButton { ...this.props } />
       </div>
     );
   }

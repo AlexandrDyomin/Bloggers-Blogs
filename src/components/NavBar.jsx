@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import createListComponents from '../functions/createListComponents'
 
 class NavBar extends React.Component {
   render() {
-    let sideBarStyle= {
-      width: '15%',
+    let navBarStyle= {
       padding: 10,
       margin: 10
     };
@@ -20,11 +19,11 @@ class NavBar extends React.Component {
     };
 
     return(
-      <div style={sideBarStyle}>
-        <div style={textStyle}>Темы</div>
-        {createListComponents(this.props.themesList)}
-        <div style={textStyle}>Другие возможности</div>
-        {createListComponents(this.props.data)}
+      <div style={ navBarStyle }>
+        <div style={ textStyle }>Темы</div>
+        { createListComponents( this.props.themesList ) }
+        <div style={ textStyle }>Другие возможности</div>
+        { createListComponents( this.props.data ) }
       </div>
     );
   }
