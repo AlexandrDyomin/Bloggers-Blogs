@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SearchArea from './SearchArea';
 import LoginButton from './LoginButton';
 
 class Header extends React.Component {
+  
   render() {
     let headerStyle = {
       height: "10vh",

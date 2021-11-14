@@ -1,0 +1,7 @@
+.new-article__content {
+  display: flex;
+}
+
+.new-article__organizer {
+  width: 220px;
+}

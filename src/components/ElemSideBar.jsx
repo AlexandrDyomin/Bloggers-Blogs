@@ -20,7 +20,8 @@ class ElemSideBar extends React.Component {
       fontSize: 20,
       fontFamily: 'Courier',
       overflow: 'hidden',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      color: "#474545"
     };
 
     return(

@@ -15,7 +15,7 @@ class NavBar extends React.Component {
       fontSize: 20,
       opacity: 0.5,
       fontWeight: 'bold',
-      borderBottom: '1px solid blue'
+      borderBottom: '1px solid blue'    
     };
 
     return(

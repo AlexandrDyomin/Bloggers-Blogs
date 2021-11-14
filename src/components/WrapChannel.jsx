@@ -15,7 +15,7 @@ class FormChannel extends React.Component {
   render() {
     return(
       <form method='post' encType='multipart/form-data' 
-        action='http://localhost:3001/create-channel'>
+        action='http://localhost:3000/create-channel'>
         <input name='name' placeholder='название канала' />
         <input name='image' placeholder='загрузить логотип' type='file' />
         <input name='author' placeholder='автор' />
