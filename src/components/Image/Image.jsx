@@ -1,12 +1,8 @@
-import "./style.css"
-const Image = ( { url, title } ) => {
+import "./style.css";
+
+const Image = ( { url, index } ) => {
   url = URL.createObjectURL( new Blob( [ url ] ) );
-  return(
-    <figure>
-      <img className="image" src={ url } alt="" />
-      <figcaption>{ title }</figcaption>
-    </figure>
-  );
+  return <img className="image" src={ url } alt="" data-index={ index } />;
 }
 
 export default Image;

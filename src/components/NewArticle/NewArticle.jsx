@@ -5,27 +5,36 @@ import Organizer from '../Organizer/Organizer';
 
 class NewArticle extends React.Component {
   state = {
-    metaInfo: { channel: "", theme: "", title: "" },
+    metaInfo: { channel: "Выберите канал", theme: "", title: "" },
     info: [ { type: "TextArea", value: "" } ],
     disabledBtnAppendText: true
   }
 
   render() {
     const handleFileChange = ( e ) => {
-      let file = e.currentTarget.files[0];     
+      let file = e.currentTarget.files[0];  
       let reader = new FileReader();
       reader.readAsArrayBuffer( file );  
-      if ( this.state.info.length - e.currentTarget.dataset.index === 1 ) {
+      if ( this.state.info.length - e.currentTarget.dataset.index === 2 ) {
+        
         reader.onload = () => {
+          let numberOfRecords = this.state.info.length;
           this.setState({
-            info: [ ...this.state.info, { type: "img", url: reader.result } ]
+            info: [ 
+              ...this.state.info.slice( 0, numberOfRecords - 1 ), 
+              { type: "img", url: reader.result },
+              ...this.state.info.slice( -1 )
+            ]
           });
         }
       } else {
-        let index = +e.currentTarget.dataset.index + 1;
-        reader.onload = (r) => {
-          let  modifiedInfo  = [ ... this.state.info ] ;
-          modifiedInfo[index].url = reader.result;
+        let index = +e.currentTarget.dataset.index;
+        reader.onload = () => {
+          let modifiedInfo = [ 
+            ...this.state.info.slice( 0, index + 1 ),
+            { type: "img", url: reader.result },
+            ...( this.state.info[index +1].type === "img" ) ? this.state.info.slice( index + 2 ) : this.state.info.slice( index + 1 )
+          ];
           this.setState({
             info: modifiedInfo
           });
@@ -35,7 +44,10 @@ class NewArticle extends React.Component {
 
     const appendImg = () => {
       this.setState( {
-        info: [ ...this.state.info, { type: "InputFile", value: "" } ],
+        info: [ ...this.state.info, 
+          { type: "InputFile" }, 
+          { type: "descriptionPicture", value: "" } 
+        ],
         disabledBtnAppendText: false
       });
     }

@@ -6,4 +6,5 @@
   padding: 15px;
   overflow:hidden;
   resize: none;
+  display: block;
 }
